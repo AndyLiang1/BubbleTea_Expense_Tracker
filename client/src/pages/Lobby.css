@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* ========================================================================== */
+/* Main */
+/* ========================================================================== */
+
+.lobby {
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+  /* background-size: cover; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main-container {
+  width: 50%;
+  height: 80%;
+
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bbt-img {
+  width: 50%;
+  height: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bbt-img img {
+  width: 500px;
+  height: 600px;
+}
+
+.message {
+  font-size: 3.5rem;
+  color: rgb(255, 255, 255);
+}
+
+
+.sign-up-btn:hover, .sign-in-btn:hover {
+  box-shadow: inset 0 0 0 5rem rgb(255, 139, 139);
+}
+
+.sign-up-btn, .sign-in-btn {
+	color: rgb(255, 255, 255);
+	transition: 0.25s;
+	background: none;
+	border: 0.2rem solid;
+	margin: 0.5rem;
+  padding: 1rem 2rem;
+  width: 15rem;
+
+}
+
+/* ========================================================================== */
+/* Different Screen Sizes */
+/* ========================================================================== */
+
+@media only screen and (max-width:1921px) {
+  .main-container {
+    width: 70%;
+    height: 80%;
+  }
+  
+  .message {
+    font-size: 8rem;
+  }
+
+  .sign-up-btn, .sign-in-btn {
+    border: 0.4rem solid;
+    margin: 0.8rem;
+    padding: 2rem 4rem;
+    width: 40rem;
+    font-size: 4rem;
+  }
+  
+}
+
+@media only screen and (max-width:1536px) {
+  .main-container {
+    width: 70%;
+    height: 80%;
+  }
+  .message {
+    font-size: 6rem;
+  }
+
+  .sign-up-btn, .sign-in-btn {
+    border: 0.3rem solid;
+    margin: 0.5rem;
+    padding: 1.8rem 3.5rem;
+    width: 35rem;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width:1367px) {
+  .main-container {
+    width: 60%;
+    height: 80%;
+  }
+  .message {
+    font-size: 5rem;
+  }
+
+  .sign-up-btn, .sign-in-btn {
+    border: 0.3rem solid;
+    margin: 0.5rem;
+    padding: 1.8rem 3.5rem;
+    width: 35rem;
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .lobby {
+    width: 100vw;
+    height: 93vh;
+  }
+  .main-container {
+    width: 100%;
+    height: 80%;
+  }
+  .message {
+    font-size: 4rem;
+  }
+
+  .sign-up-btn, .sign-in-btn {
+    border: 0.3rem solid;
+    margin: 0.5rem;
+    padding: 1.8rem 3.5rem;
+    width: 30rem;
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width:376px) {
+  .lobby {
+    width: 100vw;
+    height: 93vh;
+  }
+  .main-container {
+    width: 100%;
+    height: 80%;
+  }
+  .message {
+    font-size: 3rem;
+  }
+
+  .sign-up-btn, .sign-in-btn {
+    border: 0.3rem solid;
+    margin: 0.5rem;
+    padding: 1.8rem 3.5rem;
+    width: 15rem;
+    font-size: 2rem;
+  }
+}

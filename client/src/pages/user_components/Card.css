@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  font-size: 62.5%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background:white;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  border-radius: 1rem 1rem 1rem 1rem;
+}
+
+.card-attribute {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0rem 3rem 0rem 3rem; /* TRBL */
+}
+
+.card-buttons{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+}
+
+.user-table-body-row-edit, .user-table-body-row-delete {
+  font-size: 2.4rem;
+}
+
+@media only screen and (max-width:500px) {
+  
+  .card-attribute {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+
+  .user-table-body-row-edit, .user-table-body-row-delete {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width:376px) {
+  
+  .card-attribute {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+
+  .user-table-body-row-edit, .user-table-body-row-delete {
+    font-size: 1.8rem;
+  }
+}
+

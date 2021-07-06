@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.global-container {
+  width: 100vw;
+  height: 90vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* ========================================================================== */
+/* Tabs */
+/* ========================================================================== */
+
+.global-tab-container {
+    margin-top: 5rem;
+  margin-left: 20%;
+}
+
+.global-tab-container ul {
+  display: flex;
+  list-style: none;
+}
+
+.global_user-tab,
+.global_global-tab {
+  height: 100%;
+}
+
+.global-tab-container ul li h1 {
+  position: relative;
+  display: block;
+  text-emphasis: center;
+  padding: 1.1rem 1.5rem;
+  cursor: pointer;
+  background: #cecece;
+  border-radius: 0.8rem 0.8rem 0 0;
+  font-size: 1.5rem;
+}
+
+.global-tab-container ul li:nth-child(1) h1 {
+  background: #e7e7e7;
+}
+
+/* ========================================================================== */
+/* Header */
+/* ========================================================================== */
+.global-header {
+  margin-top:5rem;
+  font-style: italic;
+  color: white;
+}
+
+/* ========================================================================== */
+/* Table */
+/* ========================================================================== */
+.global-table {
+    width: 100%;
+}
+
+.global-info-container {
+  height: 70%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+.global-table-container {
+  width: 60%;
+  height: 100%;
+  overflow-y: auto;
+  border-radius: 0rem 0.8rem 0.8rem 0.8rem;
+}
+/* ========================================================================== */
+/* Table Header */
+/* ========================================================================== */
+.global-table-head tr {
+  background: var(--orange);
+  padding: 0.3rem;
+  font-size: 1.5rem;
+}
+
+.global-table-head tr td {
+  padding: 1rem;
+}
+/* ========================================================================== */
+/* Table Body */
+/* ========================================================================== */
+
+.global-table-body tr:nth-child(even) {
+  background: var(--light-orange);
+}
+
+.global-table-body tr {
+  height: 50%;
+  width: 10%;
+  background: white;
+  font-size: 1.5rem;
+
+  /* outline: thin solid; */
+}
+
+.global-table-body tr td {
+  text-align: center;
+  padding: 1.2rem;
+}
+
+.global-table-body-row-edit {
+  color: rgb(255, 42, 234);
+}
+.global-table-body-row-edit:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.global-table-body-row-delete {
+  color: red;
+}
+.global-table-body-row-delete:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.global-table-head tr:first-child td:last-child {
+  border-top-right-radius: 10px;
+}
+.global-table-body tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+.global-table-body tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+.global-button-container {
+  width: 20%;
+  height: 100%;
+
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+/* ========================================================================== */
+/* Different Screen Sizes */
+/* ========================================================================== */
+@media only screen and (max-width:1921px) {
+  .global-header{
+    font-size: 4rem;
+  }
+  .global-tab-container ul li h1 {
+    padding: 1.5rem 2.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    font-size: 4rem;
+  }
+
+  .global-table-head tr {
+    padding: 0.7rem;
+    font-size: 3.5rem;
+  }
+
+  .global-table-body tr {
+    background: white;
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width:1537px) {
+  .global-header{
+    font-size: 3rem;
+  }
+  .global-tab-container ul li h1 {
+    padding: 1.5rem 2.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    font-size: 2.2rem;
+  }
+
+  .global-table-head tr {
+    padding: 0.7rem;
+    font-size: 2.2rem;
+  }
+
+  .global-table-body tr {
+    background: white;
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width:1367px) {
+  .global-header{
+    font-size: 2.7rem;
+  }
+  .global-tab-container ul li h1 {
+    padding: 1.1rem 1.8rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    font-size: 2.2rem;
+  }
+
+  .global-table-head tr {
+    padding: 0.7rem;
+    font-size: 2.2rem;
+  }
+
+  .global-table-body tr {
+    background: white;
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .global-container {
+    height: 93vh;
+  }
+
+  .global-header{
+    font-size: 2.7rem;
+  }
+}
+
+@media only screen and (max-width:376px) {
+  .global-header{
+    font-size: 2.1rem;
+  }
+  .global-tab-container ul li h1 {
+    padding: 1.1rem 1.8rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    font-size: 1.8rem;
+  }
+
+  .global-table-head tr {
+    padding: 0.7rem;
+    font-size: 1.8rem;
+  }
+
+  .global-table-body tr {
+    background: white;
+    font-size: 1.8rem;
+  }
+}

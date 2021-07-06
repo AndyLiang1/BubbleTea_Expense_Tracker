@@ -1,0 +1,223 @@
+:root {
+  --dark-peach: #e85e59;
+  --light-peach: #f7765d;
+  --pink: #ffdcde;
+  --orange: rgb(255, 137, 46);
+  --light-orange: rgb(255, 194, 148);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  background-image: url("./img/wallpaper.png");
+  background-size: cover;
+}
+
+/* ========================================================================== */
+/* Header */
+/* ========================================================================== */
+header {
+  width: 100vw;
+  height: 10vh;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  background-image: linear-gradient(
+    to right,
+    var(--dark-peach),
+    var(--light-peach)
+  );
+  z-index: 100;
+}
+.logo-title {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+
+  /* transform: translate(-50%, -50%); */
+}
+
+.logo {
+  height: 5rem;
+  width: 5rem;
+}
+
+.logout {
+  right: 2%;
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.logout:hover {
+  cursor: pointer;
+}
+
+.logout h1 {
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.logout-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: white;
+}
+
+.title {
+  color: white;
+}
+
+@media only screen and (max-width: 380px) {
+  .logo {
+    height: 4.5rem;
+    width: 5rem;
+  }
+
+  .logo-title {
+    height: 100%;
+    width: 100%;
+  
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+    /* transform: translate(-50%, -50%); */
+  }
+
+  .logout h1 {
+    font-size:3rem;
+  }
+
+  .logout-icon {
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+}
+
+/* ========================================================================== */
+/* Different Screen Sizes */
+/* ========================================================================== */
+
+@media only screen and (max-width:1921px) {
+  .logo {
+    height: 6.5rem;
+    width: 7rem;
+  }
+
+  .logo-title {
+    font-size: 2.4rem;
+    /* transform: translate(-50%, -50%); */
+  }
+
+  .logout h1 {
+    font-size:3rem;
+  }
+
+  .logout-icon {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+@media only screen and (max-width:1367px) {
+  .logo {
+    height: 5.9rem;
+    width: 6.3rem;
+  }
+
+  .logo-title {
+    font-size: 2.3rem;
+  }
+
+  .logout h1 {
+    font-size: 2.9rem;
+  }
+
+  .logout-icon {
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+}
+
+@media only screen and (max-width:1000px) {
+  .logo {
+    height: 5.9rem;
+    width: 6.3rem;
+  }
+
+  .logo-title {
+    font-size: 2.1rem;
+  }
+
+  .logout h1 {
+    font-size: 3rem;
+  }
+
+  .logout-icon {
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  header{
+    height: 7vh;
+  }
+  .logo {
+    height: 5rem;
+    width: 5.5rem;
+  }
+
+  .logo-title {
+    font-size: 1.8rem;
+  }
+
+  .logout h1 {
+    display:none;  
+  }
+
+  .logout-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+@media only screen and (max-width:360px) {
+  header{
+    height: 7vh;
+  }
+  .logo {
+    height: 5rem;
+    width: 5.5rem;
+  }
+
+  .logo-title {
+    font-size: 2rem;
+  }
+
+  .logout h1 {
+    display:none;  
+  }
+
+  .logout-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+

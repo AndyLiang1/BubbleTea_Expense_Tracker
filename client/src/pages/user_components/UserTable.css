@@ -1,0 +1,517 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.user-container {
+  width: 100vw;
+  height: 90vh;
+
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  grid-template-rows: 3fr 1fr;
+  
+  grid-template-areas:
+  "userChart sideBtns"
+  "spending sideBtns";
+
+}
+
+.user-tab-table-container{
+  height: 100%;
+  width: 100%;
+
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: userChart;
+
+  overflow-y: auto;
+}
+
+.user-tab-table{
+  height: 80%;
+  width: 80%;
+
+}
+/* ========================================================================== */
+/* Tabs */
+/* ========================================================================== */
+.user-tab-container ul {
+  display: flex;
+  list-style: none;
+
+}
+
+/* .user_user-tab, .user_global-tab {
+  height: 100%;
+} */
+
+.user-tab-container ul li h1 {
+  position: relative;
+  display: block;
+  text-emphasis: center;
+  padding: 1.1rem 1.5rem;
+  cursor: pointer;
+  background: #cecece;
+  border-radius: 0.8rem 0.8rem 0 0;
+  font-size: 1rem;
+
+}
+
+.user-tab-container ul li:nth-child(1) h1 {
+  background: #e7e7e7;
+}
+
+/* ========================================================================== */
+/* End of Tabs */
+/* ========================================================================== */
+
+.user-table-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 0rem 0.8rem 0.8rem 0.8rem;
+
+  overflow-y: auto;
+
+
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse; 
+  overflow-y: auto;
+
+}
+/* ========================================================================== */
+/* Table Header */
+/* ========================================================================== */
+.user-table-head tr {
+  background: var(--orange);
+  padding: 0.3rem;
+  font-size: 1.5rem;
+
+}
+
+.user-table-head tr td {
+  padding: 1rem;
+}
+/* ========================================================================== */
+/* Table Body */
+/* ========================================================================== */
+.user-table-body tr:nth-child(even) {
+  background: var(--light-orange);
+}
+
+.user-table-body tr {
+  height: 50%;
+  width: 10%;
+  background: white;
+  font-size: 1.5rem;
+}
+
+.user-table-body tr td {
+  text-align: center;
+  padding: 1.2rem;
+}
+
+.user-table-body-row-edit {
+  color: rgb(255, 42, 234);
+}
+.user-table-body-row-edit:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+
+}
+.user-table-body-row-delete {
+  color: red;
+}
+.user-table-body-row-delete:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.user-table-head tr:first-child td:last-child { border-top-right-radius: 1rem; }
+
+/* ========================================================================== */
+/* Side Buttons */
+/* ========================================================================== */
+.user-button-container {
+  height: 100%;
+  width: 100%;
+
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center; 
+
+  grid-area: sideBtns;
+
+}
+
+.user-side-button {
+  height: 20%;
+  width: 20%;
+  color: lightblue;
+}
+
+.user-side-button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+
+}
+
+.spending-message-container{
+  height: 100%;
+  width: 100%;  
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  
+  grid-area: spending;
+}
+
+.spending-message-wrapper {
+  height: 100%;
+  width: 80%;  
+
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+
+}
+
+.spending-message-1 {
+  flex:50%;
+  background: var(--orange);
+  border-radius: 0.8rem 0rem 0rem 0.8rem;
+}
+
+.spending-message-2 {
+  flex:50%;
+  background: white;
+  border-radius: 0rem 0.8rem 0.8rem 0rem;
+}
+
+/* ========================================================================== */
+/* Different Screen Sizes */
+/* ========================================================================== */
+
+@media (min-width: 1000px) {
+  .card {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .user-table {
+    display: none;
+  }
+  .user-table-container .card:nth-child(even){
+    background: var(--orange);
+  }
+}
+
+@media (max-width: 1000px) {
+  .user-table {
+    display: none;
+  }
+  .user-table-container .card:nth-child(even){
+    background: var(--orange);
+    
+  }
+}
+
+@media only screen and (max-width:1921px) {
+  .user-tab-container ul li h1 {
+    padding: 1.4rem 2rem;
+    cursor: pointer;
+    background: #cecece;
+    border-radius: 1.1rem 1.1rem 0 0;
+    font-size: 2.4rem;
+  }
+
+  .user-table-head tr {
+    background: var(--orange);
+    padding: 0.5rem;
+    font-size: 2.4rem;
+  }
+
+  .user-table-body tr {
+    font-size: 2.4rem;
+  }
+
+  .spending-message-1 {
+    font-size: 3rem;
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
+  }
+
+  .spending-message-2 {
+    font-size: 3rem;
+    border-radius: 0rem 0.8rem 0.8rem 0rem;
+  }
+}
+
+@media only screen and (max-width:1537px) {
+  .user-tab-container ul li h1 {
+    padding: 1.1rem 1.6rem;
+    cursor: pointer;
+    background: #cecece;
+    border-radius: 1.1rem 1.1rem 0 0;
+    font-size: 2rem;
+  }
+
+  .user-table-head tr {
+    background: var(--orange);
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .user-table-body tr {
+    font-size: 2rem;
+  }
+
+  .spending-message-1 {
+    font-size: 3rem;
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
+  }
+
+  .spending-message-2 {
+    font-size: 3rem;
+    border-radius: 0rem 0.8rem 0.8rem 0rem;
+  }
+}
+
+
+@media only screen and (max-width:1367px) {
+  .user-tab-container ul li h1 {
+    padding: 1.2rem 1.7rem;
+    cursor: pointer;
+    background: #cecece;
+    border-radius: 0.8rem 0.8rem 0 0;
+    font-size: 1.8rem;
+  }
+
+  .user-table-head tr {
+    background: var(--orange);
+    padding: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .user-table-body tr {
+    font-size: 1.8rem;
+  }
+
+  .spending-message-1 {
+    font-size: 3rem;
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
+  }
+
+  .spending-message-2 {
+    font-size: 3rem;
+    border-radius: 0rem 0.8rem 0.8rem 0rem;
+  }
+}
+
+
+@media only screen and (max-width:500px) {
+  .user-container {
+    height: 93vh;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 7fr 1.5fr;
+    
+    grid-template-areas:
+    "sideBtns"
+    "userChart"
+    "spending";
+  }
+
+  .user-tab-table-container {
+    margin-top: -10%;
+  }
+
+  .user-tab-container ul li:nth-child(1) h1 {
+    padding: 1.1rem 1.5rem;
+    background: #e7e7e7;
+    border-radius: 0.8rem 0.8rem 0 0;
+    font-size: 1.85rem;
+  }
+  .user-tab-container ul li:nth-child(2) h1 {
+    padding: 1.1rem 1.5rem;
+    background: #cecece;
+    border-radius: 0.8rem 0.8rem 0 0;
+    font-size: 1.85rem;
+  }
+
+  .user-table-container .card:nth-child(even){
+    background: var(--orange);
+  }
+
+  .user-button-container {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .user-side-button {
+    height: 40%;
+  }
+  .user-tab-container ul li h1 {
+    padding: 1.2rem 1.7rem;
+    cursor: pointer;
+    background: #cecece;
+    border-radius: 0.8rem 0.8rem 0 0;
+    font-size: 2.3rem;
+  }
+
+  .user-table-head tr {
+    background: var(--orange);
+    padding: 0.5rem;
+    font-size: 2.3rem;
+  }
+
+  .user-table-body tr {
+    font-size: 2.3rem;
+  }
+
+  .spending-message-1 {
+    font-size: 2.3rem;
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
+  }
+
+  .spending-message-2 {
+    font-size: 2.4rem;
+    border-radius: 0rem 0.8rem 0.8rem 0rem;
+  }
+}
+
+@media only screen and (max-width:376px) {
+  .user-container {
+    height: 93vh;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 7fr 1.5fr;
+    
+    grid-template-areas:
+    "sideBtns"
+    "userChart"
+    "spending";
+  }
+
+  .user-tab-table-container {
+    margin-top: -10%;
+  }
+
+  .user-tab-container ul li:nth-child(1) h1 {
+    padding: 1.1rem 1.5rem;
+    background: #e7e7e7;
+    border-radius: 0.8rem 0.8rem 0 0;
+    font-size: 1.65rem;
+  }
+  .user-tab-container ul li:nth-child(2) h1 {
+    padding: 1.1rem 1.5rem;
+    background: #cecece;
+    border-radius: 0.8rem 0.8rem 0 0;
+    font-size: 1.65rem;
+  }
+
+  .user-table {
+    display: none;
+  }
+
+  .user-table-container .card:nth-child(even){
+    background: var(--orange);
+  }
+
+  .user-button-container {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .user-side-button {
+    height: 40%;
+  }
+  .user-tab-container ul li h1 {
+    padding: 1.2rem 1.7rem;
+    cursor: pointer;
+    background: #cecece;
+    border-radius: 0.8rem 0.8rem 0 0;
+    font-size: 2.4rem;
+  }
+
+  .user-table-head tr {
+    background: var(--orange);
+    padding: 0.5rem;
+    font-size: 2.2rem;
+  }
+
+  .user-table-body tr {
+    font-size: 2.2rem;
+  }
+
+  .spending-message-1 {
+    font-size: 2rem;
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
+  }
+
+  .spending-message-2 {
+    font-size: 2rem;
+    border-radius: 0rem 0.8rem 0.8rem 0rem;
+  }
+}
+
+
+@media (min-width: 500px) and (max-width: 1000px) {
+  .user-table {
+    display: none;
+  }
+  .user-table-container .card:nth-child(even){
+    background: var(--orange);
+    
+  }
+ 
+  .spending-message-1 {
+    font-size: 1.8rem;
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
+  }
+
+  .spending-message-2 {
+
+    font-size: 1.8rem;
+    border-radius: 0rem 0.8rem 0.8rem 0rem;
+  }
+}
+
+/* @media (max-height: 700px) {
+  .user-tab-container ul li h1 {
+    position: relative;
+    display: block;
+    text-emphasis: center;
+    padding: 1.1rem 1.5rem;
+    cursor: pointer;
+    background: #cecece;
+    border-radius: 0.8rem 0.8rem 0 0;
+    font-size: 1rem;
+  
+  }
+  
+} */

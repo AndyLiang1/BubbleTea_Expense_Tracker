@@ -1,0 +1,161 @@
+.edit-pop-up{
+    width: 50%;
+    height: 70%;
+    background-color: white;
+    position: absolute;
+
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-image: linear-gradient(to top left, red, purple);
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(255, 255, 255);
+    border-radius: 1rem;
+}
+
+.edit-pop-up-form {
+    height: 100%;
+    width: 100%;
+    
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.edit-pop-up-label {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.edit-pop-up-btn-container{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+
+.edit-pop-up-cancel-btn:hover,
+.edit-pop-up-submit-btn:hover {
+  box-shadow: inset 0 0 0 2rem rgb(255, 139, 139);
+}
+
+.edit-pop-up-cancel-btn,
+.edit-pop-up-submit-btn {
+  color: rgb(255, 255, 255);
+  transition: 0.25s;
+  background: none;
+  border: 0.2rem solid;
+  padding: 1rem 2rem;
+}
+
+.required:after {
+  content:" *";
+  color: red;
+}
+
+.edit-pop-up-field-error{
+  color:white;
+}
+
+/* ========================================================================== */
+/* Different Screen Sizes */
+/* ========================================================================== */
+
+@media only screen and (max-width:1921px) {
+  .edit-pop-up-label {
+    font-size: 3rem;
+  }
+ 
+  .edit-pop-up-cancel-btn,
+  .edit-pop-up-submit-btn {
+    border: 0.4rem solid;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+  }
+  
+  .edit-pop-up-field {
+    font-size: 3rem;
+  }
+
+  .edit-pop-up-cancel-btn:hover,
+  .edit-pop-up-submit-btn:hover {
+    box-shadow: inset 0 0 0 5rem rgb(255, 139, 139);
+  }
+
+  .edit-pop-up-field-error{
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width:1367px) {
+  .edit-pop-up-label {
+    font-size: 2.4rem;
+  }
+ 
+  .edit-pop-up-cancel-btn,
+  .edit-pop-up-submit-btn {
+    border: 0.25rem solid;
+    padding: 0.8rem 1.6rem;
+    font-size: 2.4rem;
+  }
+  
+  .edit-pop-up-field {
+    font-size: 2.4rem;
+  }
+
+  .edit-pop-up-cancel-btn:hover,
+  .edit-pop-up-submit-btn:hover {
+    box-shadow: inset 0 0 0 5rem rgb(255, 139, 139);
+  }
+
+  .edit-pop-up-field-error{
+    font-size: 1.5rem;
+  }
+
+}
+
+@media only screen and (max-width:500px) {
+  .edit-pop-up{
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width:376px) {
+  .edit-pop-up-label {
+    font-size: 2rem;
+  }
+ 
+  .edit-pop-up-cancel-btn,
+  .edit-pop-up-submit-btn {
+    border: 0.25rem solid;
+    padding: 0.8rem 1.6rem;
+    font-size: 2rem;
+  }
+  
+  .edit-pop-up-field {
+    font-size: 2rem;
+  }
+
+  .edit-pop-up-cancel-btn:hover,
+  .edit-pop-up-submit-btn:hover {
+    box-shadow: inset 0 0 0 5rem rgb(255, 139, 139);
+  }
+
+  .edit-pop-up-field-error{
+    font-size: 1.5rem;
+  }
+}
