@@ -6,9 +6,13 @@ https://bubbletea-expense-tracker.netlify.app/
 
 # Intro from creator: 
 
-Hello! Welcome to the codebase for BubbleTea Expense Tracker! As many of you know, bubble tea is becoming an increasingly popular drink. This inspired the creation of this app, which is designed to help users track their bubble tea spendings. But that's not all this website can do! 
+Hello! Welcome to the code
+
+
+base for BubbleTea Expense Tracker! As many of you know, bubble tea is becoming an increasingly popular drink. This inspired the creation of this app, which is designed to help users track their bubble tea spendings. But that's not all this website can do! 
 
 # Demo: 
+https://user-images.githubusercontent.com/69891690/124684136-57cbfb00-de83-11eb-973c-83245fb4bdbf.mp4
 
 # Features:
 
