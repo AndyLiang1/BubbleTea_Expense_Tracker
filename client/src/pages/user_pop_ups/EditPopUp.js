@@ -79,7 +79,7 @@ function EditPopUp({
   const editPurchase = (data) => {
     setIsQuerying(false)
     const userId = authState.id;
-    fetch("https://bubbletea-expense-tracker.herokuapp.com/user/editPurchase", {
+    fetch("https://bubbletea-expense-tracker.herokuapp.com/user/purchase", {
       method: "PUT",
       headers: {
         "Content-type": "application/json",

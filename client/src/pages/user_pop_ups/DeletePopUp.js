@@ -45,7 +45,7 @@ function DeletePopUp({
   const deleteEdit = () => {
     const userId = authState.id;
     setIsQuerying(false)
-    fetch(`https://bubbletea-expense-tracker.herokuapp.com/user/deletePurchase/${userId}/${purchaseIdDelete}`, {
+    fetch(`https://bubbletea-expense-tracker.herokuapp.com/user/purchase/${userId}/${purchaseIdDelete}`, {
       method: "DELETE",
       headers: {
         accessToken: localStorage.getItem("accessToken"),

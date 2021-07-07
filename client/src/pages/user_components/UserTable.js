@@ -56,7 +56,7 @@ function UserTable({
     if (isQuerying) {
       return;
     }
-    fetch("https://bubbletea-expense-tracker.herokuapp.com/user/getPurchases/" + authState.id, {
+    fetch("https://bubbletea-expense-tracker.herokuapp.com/user/purchase/" + authState.id, {
       headers: {
         accessToken: localStorage.getItem("accessToken"),
       },
@@ -110,7 +110,7 @@ function UserTable({
    */
   const fillInLabelsWithPrevValues = () => {
     const userId = authState.id;
-    fetch(`https://bubbletea-expense-tracker.herokuapp.com/user/getOnePurchase/${userId}/${purchaseIdEdit}`, {
+    fetch(`https://bubbletea-expense-tracker.herokuapp.com/user/purchase/${userId}/${purchaseIdEdit}`, {
       headers: {
         accessToken: localStorage.getItem("accessToken"),
       },

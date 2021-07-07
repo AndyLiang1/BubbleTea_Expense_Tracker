@@ -76,7 +76,7 @@ function AddPopUp({
   const addPurchase = (data) => {
     setIsQuerying(false)
     const userId = authState.id;
-    fetch("https://bubbletea-expense-tracker.herokuapp.com/user/addPurchase", {
+    fetch("https://bubbletea-expense-tracker.herokuapp.com/user/purchase", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
