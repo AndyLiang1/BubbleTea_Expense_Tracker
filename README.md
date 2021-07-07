@@ -13,7 +13,7 @@ base for BubbleTea Expense Tracker! As many of you know, bubble tea is becoming 
 
 # Demo: 
 
-https://user-images.githubusercontent.com/69891690/124684365-cd37cb80-de83-11eb-90e5-c020d88a3a5f.mp4
+https://user-images.githubusercontent.com/69891690/124684851-e3925700-de84-11eb-9ded-dde46277fae7.mp4
 
 # Features:
 
