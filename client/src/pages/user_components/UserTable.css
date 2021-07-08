@@ -330,6 +330,37 @@ html {
   }
 }
 
+@media only screen and (max-width:1281px) {
+  .user-tab-container ul li h1 {
+    padding: 1.1rem 1.6rem;
+    cursor: pointer;
+    background: #cecece;
+    border-radius: 0.8rem 0.8rem 0 0;
+    font-size: 1.6rem;
+  }
+
+  .user-table-head tr {
+    background: var(--orange);
+    padding: 0.5rem;
+    font-size: 1.6rem;
+  }
+
+  .user-table-body tr {
+    font-size: 1.6rem;
+  }
+
+  .spending-message-1 {
+    font-size: 3rem;
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
+  }
+
+  .spending-message-2 {
+    font-size: 3rem;
+    border-radius: 0rem 0.8rem 0.8rem 0rem;
+  }
+}
+
+
 
 @media only screen and (max-width:500px) {
   .user-container {

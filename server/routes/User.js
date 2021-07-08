@@ -26,9 +26,6 @@ router.get("/purchase/:userId", validateToken, async (req, res) => {
   res.json(result);
 });
 
-
-
-
 /**
  * This route retrieves the purchase with purchaseId of "purchaseId" 
  * from the user with an id of "id". 
