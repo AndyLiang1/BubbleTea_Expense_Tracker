@@ -16,67 +16,38 @@ const { validateToken } = require("../middlewares/AuthMiddleware");
  *          they will be ordered alphabetically.
  */
 router.get("/purchase/:userId", validateToken, async (req, res) => {
-  const { userId, purchaseId } = req.params;
-  console.log(purchaseId)
-  let result
-  if(userId === null && purchaseId === null) {
-    result = getGlobalPurchases()
-  } else if (purchaseId === null){
-    result = getUserPurchases()
-  } else {
-    result = getOnePurchase(userId, purchaseId)
-  }
-  res.json(result);
-});
-
-const getUserPurchases = async(userId) => {
+  const { userId } = req.params;
   const query =
     "SELECT * FROM purchases where userId = ? ORDER BY date DESC, flavour";
-    result = await sequelize.query(query, {
+  result = await sequelize.query(query, {
     replacements: [userId],
     type: QueryTypes.SELECT,
   });
-  return result;
-}
+  res.json(result);
+});
 
-const getOnePurchase = async (userId, purchaseId) => {
+
+
+
+/**
+ * This route retrieves the purchase with purchaseId of "purchaseId" 
+ * from the user with an id of "id". 
+ * 
+ * @param userId: id of the user we are retreiving purchase information from
+ * @param purchaseId: id of the purchase we are retreiving information from
+ * @returns a response containing the purchase with purchaseId of "purchaseId" 
+ *          from the user with an id of "id". 
+ */
+router.get("/purchase/:userId/:purchaseId", validateToken, async (req, res) => {
+  const { userId, purchaseId } = req.params;
   const query =
     "SELECT * FROM purchases where userId = ? AND id = ?";
   const result = await sequelize.query(query, {
     replacements: [userId, purchaseId],
     type: QueryTypes.SELECT,
   });
-  return result
-}
-
-const getGlobalPurchases = async () => {
-  const query =
-    "SELECT flavour, SUM(quantity) as total_count FROM purchases GROUP BY flavour ORDER BY total_count DESC, flavour LIMIT 7";
-  const result = await sequelize.query(query, {
-    type: QueryTypes.SELECT,
-  });
-  return result;
-}
-
-// /**
-//  * This route retrieves the purchase with purchaseId of "purchaseId" 
-//  * from the user with an id of "id". 
-//  * 
-//  * @param userId: id of the user we are retreiving purchase information from
-//  * @param purchaseId: id of the purchase we are retreiving information from
-//  * @returns a response containing the purchase with purchaseId of "purchaseId" 
-//  *          from the user with an id of "id". 
-//  */
-// router.get("/getOnePurchase/:userId/:purchaseId", validateToken, async (req, res) => {
-//   const { userId, purchaseId } = req.params;
-//   const query =
-//     "SELECT * FROM purchases where userId = ? AND id = ?";
-//   const result = await sequelize.query(query, {
-//     replacements: [userId, purchaseId],
-//     type: QueryTypes.SELECT,
-//   });
-//   res.json(result);
-// });
+  res.json(result);
+});
 
 /**
  * This route retrieves the 7 most popular flavours, 
@@ -87,14 +58,14 @@ const getGlobalPurchases = async () => {
  *          along with the total number of purchases for those flavours,
  *          with the highest total number of purchases
  */
-// router.get("/getGlobalPurchases", validateToken, async (req, res) => {
-//   const query =
-//     "SELECT flavour, SUM(quantity) as total_count FROM purchases GROUP BY flavour ORDER BY total_count DESC, flavour LIMIT 7";
-//   const result = await sequelize.query(query, {
-//     type: QueryTypes.SELECT,
-//   });
-//   res.json(result);
-// });
+router.get("/purchase", validateToken, async (req, res) => {
+  const query =
+    "SELECT flavour, SUM(quantity) as total_count FROM purchases GROUP BY flavour ORDER BY total_count DESC, flavour LIMIT 7";
+  const result = await sequelize.query(query, {
+    type: QueryTypes.SELECT,
+  });
+  res.json(result);
+});
 
 /**
  * This route adds a purchase for the user with an id of "userId"
@@ -165,18 +136,15 @@ router.put("/purchase", validateToken, async (req, res) => {
  * @param userId: id of the user we are retreiving purchase information from
  * @param purchaseId: id of the purchase we are retreiving information from
  */
-router.delete(
-  "/purchase/:userId/:purchaseId",
-  validateToken,
-  async (req, res) => {
-    const { userId, purchaseId } = req.params;
-    const query = "DELETE from purchases WHERE UserId = ? AND id = ? ";
-    const result = await sequelize.query(query, {
-      replacements: [userId, purchaseId],
-      type: QueryTypes.DELETE,
-    });
-    res.json({ success: true });
-  }
+router.delete("/purchase/:userId/:purchaseId", validateToken, async (req, res) => {
+  const { userId, purchaseId } = req.params;
+  const query = "DELETE from purchases WHERE UserId = ? AND id = ? ";
+  const result = await sequelize.query(query, {
+    replacements: [userId, purchaseId],
+    type: QueryTypes.DELETE,
+  });
+  res.json({ success: true });
+}
 );
 
 /**
@@ -201,7 +169,7 @@ router.get("/orderByTime/:id/:time", validateToken, async (req, res) => {
     "AND UserId = ? ";
   const queryWeek =
     "SELECT * from purchases WHERE YEARWEEK(date) = YEARWEEK(NOW()) AND UserId = ? ";
-    const queryDay =
+  const queryDay =
     "SELECT * FROM purchases " +
     "WHERE date >= CURDATE() " +
     "AND date < CURDATE() + INTERVAL 1 DAY " +
