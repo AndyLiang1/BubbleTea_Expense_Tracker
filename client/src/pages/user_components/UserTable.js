@@ -56,7 +56,7 @@ function UserTable({
     if (isQuerying) {
       return;
     }
-    fetch("http://localhost:3001/user/purchase/" + authState.id, {
+    fetch("https://bubbletea-expense-tracker.herokuapp.com/purchase/" + authState.id, {
       headers: {
         accessToken: localStorage.getItem("accessToken"),
       },
