@@ -22,10 +22,10 @@ https://user-images.githubusercontent.com/69891690/124684851-e3925700-de84-11eb-
   4) Add a purchase to a database 
   5) Edit your purchases
   6) Delete your purchases
-  7) Get information such as:
-      7.1) All purchases you made in the last week, day, month etc
-      7.2) All purchases you made ranked by price (ascending or descending)
-      7.3) What is the location (visited) with the cheapest price for some flavour that you want
+  7) Get information such as:__
+      7.1) All purchases you made in the last week, day, month etc__
+      7.2) All purchases you made ranked by price (ascending or descending)__
+      7.3) What is the location (visited) with the cheapest price for some flavour that you want__
      
   ## Global Chart
   8) Checking out the most popular flavour amongst users
